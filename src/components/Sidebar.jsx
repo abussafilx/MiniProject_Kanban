@@ -1,8 +1,9 @@
 function Sidebar() {
-    <div>
-        <a href="">Home</a>
-        <a href="">About</a>
-    </div>
+    return (
+        <div>
+            <div><a href="#">Home</a></div>
+            <div><a href="#">About</a></div>
+        </div>)
 
 }
 
