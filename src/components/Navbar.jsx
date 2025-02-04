@@ -2,7 +2,7 @@ import logo  from '../assets/images/kanban-logo.png';
 
 const Navbar = () => (
   <nav className='navbar'>
-    <img src={logo} alt="App Logo" />
+    <img className='logo' src={logo} alt="App Logo" />
     <h1>Kanban Board</h1>
   </nav>
 );
