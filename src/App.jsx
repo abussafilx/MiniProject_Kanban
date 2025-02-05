@@ -1,20 +1,17 @@
-import './assets/styles/App.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Sidebar from './components/Sidebar'
-import ItemCard from './components/ItemCard'
-
+import "./assets/styles/App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
+import ItemCard from "./components/ItemCard";
 
 function App() {
-
-
   return (
     <>
       <Navbar />
 
       <Sidebar></Sidebar>
 
-      <div id='board'>
+      <div id="board">
         <div>
           <ItemCard></ItemCard>
         </div>
@@ -22,7 +19,7 @@ function App() {
 
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
