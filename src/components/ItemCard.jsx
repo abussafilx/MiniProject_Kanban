@@ -32,10 +32,21 @@ function ItemCard() {
   // console.log(inProgressItems);
   // console.log(doneItems);
 
+  const statusColorsBorder = {
+    "To Do": "#FF6B6B",
+    "In Progress": "#4D90FE",
+    Done: "#66BB6A",
+  };
+
   const Column = (items) => {
     return items.map((element) => {
       return (
-        <div className="card" key={element.id} draggable="true">
+        <div
+          className="card"
+          key={element.id}
+          draggable="true"
+          style={{ borderColor: `${statusColorsBorder[element.status]}` }}
+        >
           <div>
             <b>Title:</b> {element.title}
           </div>
