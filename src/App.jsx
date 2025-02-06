@@ -1,8 +1,13 @@
 import "./assets/styles/App.css";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-import ItemCard from "./components/ItemCard";
+import ItemCard from "./pages/ItemCard";
+import About from "./pages/About";
+import ItemDetails from "./pages/ItemDetails";
+import Error404 from "./pages/Error404";
+
 
 function App() {
   return (
@@ -12,9 +17,13 @@ function App() {
       <Sidebar></Sidebar>
 
       <div id="board">
-        <div>
-          <ItemCard></ItemCard>
-        </div>
+        <Routes>
+          <Route path="/" element={<ItemCard></ItemCard>}/>
+          <Route path="/about" element={<About></About>}/>
+          <Route path="/item/?task" element={<ItemDetails></ItemDetails>}/>
+          <Route path="/error404" element={<Error404></Error404>}/>
+
+        </Routes>
       </div>
 
       <Footer />

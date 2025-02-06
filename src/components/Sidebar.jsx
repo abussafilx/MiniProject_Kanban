@@ -1,9 +1,11 @@
+import { NavLink } from "react-router-dom"
+
 function Sidebar() {
     return (
-        <div className="sidebar"> 
-            <div><a href="#">Home</a></div>
-            <div><a href="#">About</a></div>
-        </div>)
+        <nav className="sidebar"> 
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+        </nav>)
 
 }
 
