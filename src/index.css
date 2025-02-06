@@ -19,7 +19,7 @@ body {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #4d90fe;
   text-decoration: inherit;
 }
 a:hover {
@@ -32,7 +32,7 @@ a:hover {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #4d90fe;
   }
   button {
     background-color: #f9f9f9;
