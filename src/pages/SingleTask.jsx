@@ -1,4 +1,4 @@
-function ItemDetails() {
+function SingleTask() {
     return (
         <div>
             details
@@ -7,4 +7,4 @@ function ItemDetails() {
 
 }
 
-export default ItemDetails
+export default SingleTask
