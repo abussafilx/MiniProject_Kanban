@@ -41,7 +41,7 @@
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
 }
-.card button {
+.card .delete-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -55,11 +55,38 @@
   transition: opacity 0.2s;
 }
 
-.card button:hover {
+.card .delete-btn:hover {
   opacity: 0.8;
 }
-.card button:focus,
-.card button:focus-visible {
+.card .delete-btn:focus,
+.card .delete-btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .info-btn {
+  
+  top: 8px;
+  right: 8px;
+  border: none;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  background-color: #63aca8;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.card .info-btn:hover {
+  opacity: 0.8;
+}
+.card .info-btn:focus,
+.card .info-btn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 

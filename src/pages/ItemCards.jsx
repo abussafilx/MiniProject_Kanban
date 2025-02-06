@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 function ItemCards (props){
     const statusColorsBorder = {
         "To Do": "#FF6B6B",
@@ -33,13 +35,19 @@ function ItemCards (props){
           <div>
             <b>Due Date:</b> {props.element.dueDate}
           </div>
+          
           <div>
-            {props.element.priority === "High" && (
-              <span className="label">IMPORTANT</span>
-            )}
+            <button className="delete-btn" onClick={() => props.deleteTask(props.element.id)}>X</button>
           </div>
-          <div>
-            <button onClick={() => props.deleteTask(props.element.id)}>X</button>
+          <div className="btn-container">
+            <div>
+                {props.element.priority === "High" && (
+                <span className="label">IMPORTANT</span>
+                )}
+            </div>
+            <Link to={`/item/${props.element.id}`}>
+            <button className="info-btn">More</button>
+            </Link>
           </div>
         </div>
     )

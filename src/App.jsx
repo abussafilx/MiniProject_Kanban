@@ -33,7 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Board tasks={tasks} deleteTask={deleteTask}></Board>}/>
           <Route path="/about" element={<About></About>}/>
-          <Route path="/item/?task" element={<SingleTask tasks={tasks}></SingleTask>}/>
+          <Route path="/item/:task" element={<SingleTask tasks={tasks}></SingleTask>}/>
           <Route path="/error404" element={<Error404></Error404>}/>
 
         </Routes>
