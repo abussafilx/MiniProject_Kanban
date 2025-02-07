@@ -17,8 +17,7 @@ function SingleTask(props) {
         }
     });
 
-    console.log(taskObj)
-    
+  
     
     const statusColorsBorder = {
         "To Do": "#FF6B6B",
@@ -43,9 +42,9 @@ function SingleTask(props) {
             <div>
                 <b>Assignee:</b> {taskObj.assignee}
             </div>
-            {/* <div>
+            <div>
                 <b>Status:</b> {taskObj.status}
-            </div> */}
+            </div>
             <div>
                 <b>Priority:</b> {taskObj.priority}
             </div>
@@ -57,7 +56,7 @@ function SingleTask(props) {
             </div>
             
             <div>
-                <button className="delete-btn" onClick={() => taskObj.deleteTask(taskObj.element.id)}>X</button>
+                <button className="delete-btn" onClick={() => props.deleteTask(taskObj.id)}>X</button>
             </div>
             <div className="btn-container"> 
             <div>

@@ -92,6 +92,10 @@
   margin-top: 8px;
 }
 
+.navbar h1{
+  color: white;
+}
+
 .read-the-docs {
   color: #888;
 }

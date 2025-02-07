@@ -1,6 +1,6 @@
 import "./assets/styles/App.css";
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import data from "./data/kanban.json";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -17,12 +17,15 @@ function App() {
 
   const [tasks, setTasks] = useState(data);
 
+  const navigate = useNavigate();
+
   //function to delete tasks
   const deleteTask = (id) => {
     const newList = tasks.filter((e) => {
       return e.id !== id;
     });
     setTasks(newList);
+    navigate("/")
   };
 
   //function to create tasks
@@ -52,8 +55,8 @@ function App() {
           <Route path="/" element={<Board tasks={tasks} deleteTask={deleteTask}></Board>}/>
           <Route path="/about" element={<About></About>}/>
           <Route path="/newtask" element={<AddCard addTask={addTask}/>}/>
-          <Route path="/item/:task" element={<SingleTask tasks={tasks}></SingleTask>}/>
-          <Route path="/error404" element={<Error404></Error404>}/>
+          <Route path="/item/:task" element={<SingleTask tasks={tasks} deleteTask={deleteTask}></SingleTask>}/>
+          <Route path="*" element={<Error404></Error404>}/>
 
         </Routes>
       </div>
