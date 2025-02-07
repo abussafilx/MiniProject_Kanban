@@ -1,0 +1,192 @@
+h2 {
+  color: #333841;
+}
+
+label{
+  color: #333841;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.col {
+  flex: 1;
+  border-radius: 8px;
+  padding: 1rem;
+  min-width: 300px;
+}
+
+.col h3 {
+  margin: 0 0 1rem 0;
+  color: #172b4d;
+  font-size: 1.2rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid;
+  text-align: left;
+  color: black;
+}
+
+
+.card div {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.card .delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  background-color: #ff3b30;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.card .delete-btn:hover {
+  opacity: 0.8;
+}
+.card .delete-btn:focus,
+.card .delete-btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .info-btn {
+  
+  top: 8px;
+  right: 8px;
+  border: none;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  background-color: #63aca8;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.card .info-btn:hover {
+  opacity: 0.8;
+}
+.card .info-btn:focus,
+.card .info-btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.label {
+  background-color: #ff3b30;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+form {
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+  max-width: 400px; 
+  background: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+label {
+  font-size: 16px;
+  font-weight:600;
+  color: #333;
+}
+
+input, select, textarea {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background-color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: black
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff; /* Cor azul para foco */
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); /* Leve brilho ao redor */
+}
+
+form button {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: #1c5797; 
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #3187e2; 
+}
+
+input[type="date"] {
+  font-size: 14px;
+  color: #333;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(0.6);
+}
+
+select {
+  appearance: none; 
+  background-color: white; 
+  cursor: pointer;
+  color: #333; 
+  padding-right: 30px; 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+
+
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); 
+}

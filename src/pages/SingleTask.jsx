@@ -43,9 +43,9 @@ function SingleTask(props) {
             <div>
                 <b>Assignee:</b> {taskObj.assignee}
             </div>
-            <div>
+            {/* <div>
                 <b>Status:</b> {taskObj.status}
-            </div>
+            </div> */}
             <div>
                 <b>Priority:</b> {taskObj.priority}
             </div>

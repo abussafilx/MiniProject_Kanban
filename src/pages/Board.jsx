@@ -1,4 +1,4 @@
-import "./Board.css";
+import "../assets/styles/Board.css";
 import ItemCards from "./ItemCards";
 
 function Board(props) {
@@ -30,6 +30,7 @@ function Board(props) {
       );
     });
   };
+
 
   return (
     <div className="kanban-board">

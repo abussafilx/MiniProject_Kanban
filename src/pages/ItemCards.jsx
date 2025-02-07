@@ -46,7 +46,7 @@ function ItemCards (props){
                 )}
             </div>
             <Link to={`/item/${props.element.id}`}>
-            <button className="info-btn">More</button>
+            <button className="info-btn">More Info</button>
             </Link>
           </div>
         </div>
