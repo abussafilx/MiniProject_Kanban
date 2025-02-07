@@ -1,0 +1,20 @@
+#addTask .section-title {
+  margin: 0 0 1rem 0;
+  color: #172b4d;
+  font-size: 1.2rem;
+}
+#addTask input,
+#addTask textarea {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #172b4d;
+}
+#addTask form {
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #172b4d;
+}
+#addTask button {
+  background-color: #172b4d;
+  border-color: #172b4d;
+}

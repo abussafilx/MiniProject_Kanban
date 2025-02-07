@@ -12,7 +12,7 @@
 }
 
 .sidebar.collapsed {
-  width: 60px; 
+  width: 60px;
 }
 
 .sidebar-link {
@@ -34,7 +34,7 @@
 
 .sidebar.collapsed .sidebar-link {
   opacity: 0;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .sidebar-toggle {
@@ -66,12 +66,12 @@
 #board {
   margin-left: 15%;
   padding: 15px;
-  transition:  0.5s
+  transition: 0.5s;
 }
 
 .sidebar.collapsed ~ #board {
   margin-left: 60px;
-  transition:  0.5s
+  transition: 0.5s;
 }
 
 .navbar {
@@ -92,7 +92,7 @@
   margin-top: 8px;
 }
 
-.navbar h1{
+.navbar h1 {
   color: white;
 }
 
@@ -108,11 +108,10 @@
   border-top: 1px solid #ddd;
   font-size: 14px;
   color: #333;
-  transition:  0.5s
-
+  transition: 0.5s;
 }
 
 .sidebar.collapsed ~ #footer {
   margin-left: 60px;
-  transition:  0.5s
+  transition: 0.5s;
 }

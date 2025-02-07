@@ -2,7 +2,7 @@ h2 {
   color: #333841;
 }
 
-label{
+label {
   color: #333841;
 }
 
@@ -44,7 +44,6 @@ label{
   color: black;
 }
 
-
 .card div {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
@@ -71,23 +70,23 @@ label{
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.btn-container{
+.btn-container {
   display: flex;
   justify-content: space-between;
 }
 
 .card .info-btn {
-  
   top: 8px;
   right: 8px;
-  border: none;
-  padding: 4px 8px;
+  border: 1px solid transparent;
+  padding: 5px 8px;
   font-size: 0.8rem;
   background-color: #63aca8;
   color: white;
   border-radius: 4px;
   cursor: pointer;
   transition: opacity 0.2s;
+  font-weight: bold;
 }
 
 .card .info-btn:hover {
@@ -113,11 +112,11 @@ form {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px; 
-  max-width: 400px; 
-  background: #fff; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  gap: 12px;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form h2 {
@@ -134,7 +133,9 @@ form label {
   color: #333;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 0.8rem;
   border: 1px solid #ccc;
@@ -144,7 +145,9 @@ input, select, textarea {
   background-color: #fff;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   border-color: #007bff; /* Cor azul para foco */
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); /* Leve brilho ao redor */
 }
@@ -159,7 +162,7 @@ form button {
   font-size: 14px;
   font-weight: bold;
   color: white;
-  background: #1c5797; 
+  background: #1c5797;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -167,7 +170,7 @@ form button {
 }
 
 button:hover {
-  background: #3187e2; 
+  background: #3187e2;
 }
 
 input[type="date"] {
@@ -185,20 +188,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 select {
-  appearance: none; 
-  background-color: white; 
+  appearance: none;
+  background-color: white;
   cursor: pointer;
-  color: #333; 
-  padding-right: 30px; 
+  color: #333;
+  padding-right: 30px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 16px;
 }
 
-
-
 select:focus {
   border-color: #007bff;
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); 
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
 }

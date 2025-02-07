@@ -48,5 +48,75 @@
     "priority": "Low",
     "createdDate": "2023-09-19",
     "dueDate": "2023-09-30"
+  },
+  {
+    "id": "6",
+    "title": "Improve Mobile Responsiveness",
+    "description": "Ensure that the website is fully responsive on mobile devices.",
+    "assignee": "Emma White",
+    "status": "To Do",
+    "priority": "Medium",
+    "createdDate": "2023-09-20",
+    "dueDate": "2023-10-08"
+  },
+  {
+    "id": "7",
+    "title": "Set Up CI/CD Pipeline",
+    "description": "Configure continuous integration and deployment for the project.",
+    "assignee": "Liam Miller",
+    "status": "In Progress",
+    "priority": "High",
+    "createdDate": "2023-09-21",
+    "dueDate": "2023-10-12"
+  },
+  {
+    "id": "8",
+    "title": "Optimize Database Queries",
+    "description": "Improve database performance by optimizing queries.",
+    "assignee": "Olivia Martinez",
+    "status": "To Do",
+    "priority": "Medium",
+    "createdDate": "2023-09-22",
+    "dueDate": "2023-10-15"
+  },
+  {
+    "id": "9",
+    "title": "Create API Documentation",
+    "description": "Write detailed API documentation for developers.",
+    "assignee": "Ethan Garcia",
+    "status": "Done",
+    "priority": "Low",
+    "createdDate": "2023-09-23",
+    "dueDate": "2023-10-05"
+  },
+  {
+    "id": "10",
+    "title": "Security Audit",
+    "description": "Perform a security audit to identify vulnerabilities.",
+    "assignee": "Sophia Taylor",
+    "status": "To Do",
+    "priority": "High",
+    "createdDate": "2023-09-24",
+    "dueDate": "2023-10-18"
+  },
+  {
+    "id": "11",
+    "title": "Implement Dark Mode",
+    "description": "Add dark mode functionality to the user interface.",
+    "assignee": "James Anderson",
+    "status": "In Progress",
+    "priority": "Medium",
+    "createdDate": "2023-09-25",
+    "dueDate": "2023-10-20"
+  },
+  {
+    "id": "12",
+    "title": "Add Social Media Login",
+    "description": "Enable login via Google and Facebook authentication.",
+    "assignee": "Isabella Thomas",
+    "status": "To Do",
+    "priority": "High",
+    "createdDate": "2023-09-26",
+    "dueDate": "2023-10-22"
   }
 ]
