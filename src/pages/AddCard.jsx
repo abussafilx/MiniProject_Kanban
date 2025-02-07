@@ -14,7 +14,7 @@ function AddCard(props) {
 
     const navigate = useNavigate();
 
-    
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -42,69 +42,68 @@ function AddCard(props) {
     }
 
     return (
-        <div>
-            <h2 className="section-title">Add new task</h2>
-            <section>
-                <form onSubmit={handleSubmit}>
-                    <label>
-                        <span>Title: </span>
-                        <input
-                            type="text"
-                            name="title"
-                            required={true}
-                            placeholder="Enter title"
-                            value={title}
-                            onChange={(e) => { setTitle(e.target.value) }}
-                        />
-                    </label>
-                    <label>
-                        <span>Description: </span>
-                        <textarea
-                            id="description"
-                            name="description"
-                            placeholder="Enter description"
-                            value={description}
-                            onChange={(e) => setDescription(e.target.value)}
-                        />
-                    </label>
-                    <label>
-                        <span>Assignee: </span>
-                        <input
-                            type="text"
-                            name="assignee"
-                            required={true}
-                            placeholder="Enter assignee"
-                            value={assignee}
-                            onChange={(e) => { setAssignee(e.target.value) }}
-                        />
-                    </label>
-                    <label>
-                        <span>Priority: </span>
-                        <select name="priority" value={priority} onChange={(e) => { setPriority(e.target.value) }} >
-                            <option value="Low">Low</option>
-                            <option value="Medium">Medium</option>
-                            <option value="High">High</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span>Due Date: </span>
-                        <input
-                            type="date"
-                            name="dueDate"
-                            required={true}
-                            value={dueDate}
-                            onChange={(e) => { setDueDate(e.target.value) }}
-                        />
-                    </label>
+        <section>
+            <form onSubmit={handleSubmit}>
+                <h2 className="section-title">Add new task</h2>
+                <label>
+                    <span>Title: </span>
+                    <input
+                        type="text"
+                        name="title"
+                        required={true}
+                        placeholder="Enter title"
+                        value={title}
+                        onChange={(e) => { setTitle(e.target.value) }}
+                    />
+                </label>
+                <label>
+                    <span>Description: </span>
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Enter description"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                    />
+                </label>
+                <label>
+                    <span>Assignee: </span>
+                    <input
+                        type="text"
+                        name="assignee"
+                        required={true}
+                        placeholder="Enter assignee"
+                        value={assignee}
+                        onChange={(e) => { setAssignee(e.target.value) }}
+                    />
+                </label>
+                <label>
+                    <span>Priority: </span>
+                    <select name="priority" value={priority} onChange={(e) => { setPriority(e.target.value) }} >
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Due Date: </span>
+                    <input
+                        type="date"
+                        name="dueDate"
+                        required={true}
+                        value={dueDate}
+                        onChange={(e) => { setDueDate(e.target.value) }}
+                    />
+                </label>
 
 
-                    <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
 
 
-                </form>
-            </section>
+            </form>
+        </section>
 
-        </div>
+
     )
 
 }

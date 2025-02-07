@@ -120,26 +120,38 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-label {
-  font-size: 16px;
-  font-weight:600;
+form h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #007bff;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 14px;
   color: #333;
 }
 
 input, select, textarea {
-  padding: 10px 12px;
-  font-size: 14px;
+  width: 100%;
+  padding: 0.8rem;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  background-color: white;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  color: black
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #fff;
 }
 
 input:focus, select:focus, textarea:focus {
   border-color: #007bff; /* Cor azul para foco */
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); /* Leve brilho ao redor */
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 form button {
