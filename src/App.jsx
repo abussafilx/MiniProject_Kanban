@@ -11,6 +11,7 @@ import SingleTask from "./pages/SingleTask";
 import Error404 from "./pages/Error404";
 import AddCard from "./pages/AddCard";
 import EditCard from "./pages/EditCard";
+import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   const [tasks, setTasks] = useState(data);
@@ -19,16 +20,16 @@ function App() {
 
   //function to delete tasks
   const deleteTask = (id) => {
-    const newList = tasks.filter((e) => {
-      return e.id !== id;
-    });
+    toast("Task Deleted");
+    const newList = tasks.filter((e) => e.id !== id);
     setTasks(newList);
     navigate("/");
   };
 
   //function to create tasks
   const addTask = (taskDetails) => {
-    const newId = Math.max(...tasks.map((o) => o.id)) + 1;
+    toast("Task Created");
+    const newId = tasks.length > 0 ?Math.max(...tasks.map((o) => o.id)) + 1: 1;
     const newTask = {
       ...taskDetails,
       id: newId.toString(),
@@ -39,6 +40,7 @@ function App() {
   };
 
   const updateTask = (updatedTask) => {
+    toast("Task Updated");
     setTasks(
       tasks.map((task) => {
         if (task.id === updatedTask.id) {
@@ -58,6 +60,8 @@ function App() {
 
       <Sidebar></Sidebar>
 
+      
+
       <div id="board">
         <Routes>
           <Route
@@ -73,7 +77,7 @@ function App() {
           <Route path="/about" element={<About></About>} />
           <Route path="/newtask" element={<AddCard addTask={addTask} />} />
           <Route
-            path="/item/:task"
+            path="/item/:id"
             element={
               <SingleTask tasks={tasks} deleteTask={deleteTask}></SingleTask>
             }
@@ -87,6 +91,8 @@ function App() {
           <Route path="*" element={<Error404></Error404>} />
         </Routes>
       </div>
+
+      <ToastContainer />
 
       <Footer />
     </>
