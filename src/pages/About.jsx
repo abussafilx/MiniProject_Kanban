@@ -24,7 +24,7 @@ function About() {
     <div className="about-container">
       <h1 className="about-title">Kanban Board Mini Project</h1>
       <p className="about-description">
-        his React.js project was developed by <b>{devMembers[0].name}</b> and{" "}
+        This React.js project was developed by <b>{devMembers[0].name}</b> and{" "}
         <b>{devMembers[1].name}</b>
         &nbsp;as part of their learning journey at Ironhack.
       </p>

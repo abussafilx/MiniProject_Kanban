@@ -88,6 +88,19 @@ label {
   transition: opacity 0.2s;
   font-weight: bold;
 }
+.edit-btn {
+  top: 8px;
+  right: 8px;
+  border: 1px solid transparent;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  background-color: #172b4d;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-weight: bold;
+}
 
 .card .info-btn:hover {
   opacity: 0.8;

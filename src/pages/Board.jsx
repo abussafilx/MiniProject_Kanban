@@ -2,7 +2,6 @@ import "../assets/styles/Board.css";
 import ItemCards from "./ItemCards";
 
 function Board(props) {
-  
   //Column Structure - Conditional Rendering
 
   const toDoItems = props.tasks.filter((task) => {
@@ -20,17 +19,20 @@ function Board(props) {
       return true;
     }
   });
- 
+
   const filteredTasks = (items) => {
     return items.map((element) => {
       return (
-        
-        <ItemCards key={element.id} element={element} tasks={props.tasks} deleteTask={props.deleteTask}></ItemCards>
-        
+        <ItemCards
+          key={element.id}
+          element={element}
+          tasks={props.tasks}
+          deleteTask={props.deleteTask}
+          updateTask={props.updateTask}
+        ></ItemCards>
       );
     });
   };
-
 
   return (
     <div className="kanban-board">
