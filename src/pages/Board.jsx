@@ -20,6 +20,8 @@ function Board(props) {
     }
   });
 
+  // Filter tasks for each column
+
   const filteredTasks = (items) => {
     return items.map((element) => {
       return (
@@ -33,6 +35,8 @@ function Board(props) {
       );
     });
   };
+
+//columns
 
   return (
     <div className="kanban-board">

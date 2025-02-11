@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+//conditional styling for cards
+
 function ItemCards(props) {
   const statusColorsBorder = {
     "To Do": "#FF6B6B",
@@ -12,7 +14,7 @@ function ItemCards(props) {
       className="card"
       key={props.element.id}
       draggable="true"
-      style={{ borderColor: `${statusColorsBorder[props.element.status]}` }}
+      style={{ borderColor: `${statusColorsBorder[props.element?.status]}` }}
     >
       <div>
         <b>Title:</b> {props.element.title}

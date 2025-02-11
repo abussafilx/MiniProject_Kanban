@@ -1,0 +1,45 @@
+.error-container {
+    text-align: center;
+    background-color: #f8f8f8;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+  }
+  
+  .error-header {
+    font-size: 72px;
+    font-weight: bold;
+    margin: 0;
+    color: #ff4040;
+  }
+  
+  .error-subheader {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .error-message {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #555;
+  }
+  
+  .error-link {
+ 
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    background-color: #172b4d;
+    border-color: #172b4d;
+  }
+  
+  .error-link:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+  
