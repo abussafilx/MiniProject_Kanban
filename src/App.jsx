@@ -5,6 +5,7 @@ import data from "./data/kanban.json";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
+import SearchBar from "./components/SearchBar";
 import Board from "./pages/Board";
 import About from "./pages/About";
 import SingleTask from "./pages/SingleTask";
@@ -15,6 +16,8 @@ import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   const [tasks, setTasks] = useState(data);
+  const [searchQuery, setSearchQuery] = useState("");
+  const isHomePage = location.pathname === "/";
 
   const navigate = useNavigate();
 
@@ -29,7 +32,8 @@ function App() {
   //function to create tasks
   const addTask = (taskDetails) => {
     toast("Task Created");
-    const newId = tasks.length > 0 ?Math.max(...tasks.map((o) => o.id)) + 1: 1;
+    const newId =
+      tasks.length > 0 ? Math.max(...tasks.map((o) => o.id)) + 1 : 1;
     const newTask = {
       ...taskDetails,
       id: newId.toString(),
@@ -54,21 +58,27 @@ function App() {
     );
   };
 
+  const filteredTasks = tasks.filter((task) =>
+    Object.values(task)
+      .join(" ")
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <Navbar />
 
       <Sidebar></Sidebar>
 
-      
-
       <div id="board">
+        {isHomePage && <SearchBar onSearch={setSearchQuery} />}
         <Routes>
           <Route
             path="/"
             element={
               <Board
-                tasks={tasks}
+                tasks={filteredTasks}
                 deleteTask={deleteTask}
                 updateTask={updateTask}
               ></Board>
