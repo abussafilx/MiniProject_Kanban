@@ -1,5 +1,5 @@
 import "../assets/styles/Board.css";
-import ItemCards from "./ItemCards";
+import ItemCards from "../components/ItemCards";
 
 function Board(props) {
   //Column Structure - Conditional Rendering

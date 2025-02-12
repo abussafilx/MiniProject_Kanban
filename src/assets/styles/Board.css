@@ -59,8 +59,19 @@ label {
   color: white;
   border-radius: 4px;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: all 0.3s ease;
+  z-index: 2; /* Prioriza o botão sobre outros elementos */
 }
+
+.card .delete-btn.second-btn {
+  position: absolute;
+  top: 8px;
+  font-size: 0.7rem;
+  right: 40px; /* Altera a posição do segundo botão */
+  background-color: #0e4380fa; /* Cor diferente */
+  z-index: 1; /* Menor prioridade, se necessário */
+}
+
 
 .card .delete-btn:hover {
   opacity: 0.8;
@@ -88,6 +99,35 @@ label {
   transition: opacity 0.2s;
   font-weight: bold;
 }
+
+.card .start-btn {
+  top: 8px;
+  right: 8px;
+  border: 1px solid transparent;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  background-color: #4D90FE;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-weight: bold;
+}
+
+.card .done-btn {
+  top: 8px;
+  right: 8px;
+  border: 1px solid transparent;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  background-color: #66BB6A;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-weight: bold;
+}
+
 .edit-btn {
   top: 8px;
   right: 8px;

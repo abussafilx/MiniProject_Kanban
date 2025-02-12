@@ -48,8 +48,6 @@ function App() {
     setTasks(
       tasks.map((task) => {
         if (task.id === updatedTask.id) {
-          console.log(task);
-          console.log(updatedTask);
           return updatedTask;
         } else {
           return task;
