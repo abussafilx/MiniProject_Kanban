@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo  from '../assets/images/kanban-logo.png';
+import logo  from '../assets/images/logo.png';
 
 const Navbar = () => (
   <nav className='navbar'>

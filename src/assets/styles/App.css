@@ -3,8 +3,8 @@
   width: 15%;
   height: 100%;
   position: fixed;
-  background-color: #2c2c2c;
-  color: #d3cfcf;
+  background-color: #696868;
+  color: #ffffff;
   overflow: hidden;
   transition: width 0.3s ease, background-color 0.3s ease;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
@@ -21,7 +21,7 @@
   gap: 10px;
   padding: 15px;
   font-size: 16px;
-  color: #d3cfcf;
+  color: #ffffff;
   text-decoration: none;
   opacity: 1;
   transition: opacity 0.2s ease, background-color 0.2s ease;
@@ -75,7 +75,7 @@
 }
 
 .navbar {
-  background: #4d90fe;
+  background: #2a2b2e;
   padding: 0 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -87,7 +87,7 @@
 }
 
 .navbar .logo {
-  width: 60px;
+  
   height: 60px;
   margin-top: 8px;
 }
