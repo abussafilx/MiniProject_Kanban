@@ -46,7 +46,7 @@ function ItemCards(props) {
   };
 
   const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed); 
+    setIsCollapsed(!isCollapsed);
   };
 
   return (
@@ -75,40 +75,40 @@ function ItemCards(props) {
         </div>
       </div>
       <div>
-            <h4>{props.element.title}</h4> 
-          </div>
-          <div className="due">
-            Due Date: {props.element.dueDate}
-          </div>
+        <h4>{props.element.title}</h4>
+      </div>
+      <div className="due">
+        Due Date: {props.element.dueDate}
+      </div>
 
       {/* Conteúdo que pode ser colapsado */}
       {!isCollapsed && (
         <>
 
           <div>
-            <b>Description:</b> {props.element.description}
+            Description:<br /> <span className="info">{props.element.description}</span>
           </div>
           <div>
-            <b>Assignee:</b> {props.element.assignee}
+            Assignee:<br /> <span className="info">{props.element.assignee}</span>
           </div>
           <div>
-            <b>Status:</b> {props.element.status}
+            Status:<br /> <span className="info">{props.element.status}</span>
           </div>
           <div>
-            <b>Priority:</b> {props.element.priority}
+            <b>Priority:</b><br /> <span className="info">{props.element.priority}</span>
           </div>
           <div>
-            <b>Created Date:</b> {props.element.createdDate}
+            <b>Created Date:</b><br /> <span className="info">{props.element.createdDate}</span>
           </div>
 
         </>
       )}
 
-      <div className="btn-container">
+      <div className="btn-container-bottom">
         <div>{advanceButton()}</div>
         <div><button className="info-btn" onClick={toggleCollapse}>
-        {isCollapsed ? "Show Details" : "Hide Details"}</button></div>      
-          </div>
+          {isCollapsed ? "Show Details" : "Hide Details"}</button></div>
+      </div>
     </div>
   );
 }

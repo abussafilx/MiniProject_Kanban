@@ -4,7 +4,11 @@ h2 {
 
 h4 {
   font-size: medium;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+
+
 
 label {
   color: #333841;
@@ -56,8 +60,10 @@ label {
 }
 
 .card div {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 100;
 }
 
 .card .due {
@@ -102,7 +108,13 @@ label {
 .btn-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px; 
+  align-items: center;
+}
+
+.btn-container-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
   align-items: center;
 }
 
@@ -205,10 +217,10 @@ label {
 
 .label {
   background-color: #ff3b30;
-  padding: 3px 8px;
+  padding: 1px 6px;
   border-radius: 20px;
   color: white;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: bold;
   display: inline-block;
 }
@@ -310,5 +322,10 @@ select {
 select:focus {
   border-color: #007bff;
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+.info {
+font-weight: bold;
+font-size: .85rem;
 }
 
