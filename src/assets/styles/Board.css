@@ -2,6 +2,10 @@ h2 {
   color: #333841;
 }
 
+h4 {
+  font-size: medium;
+}
+
 label {
   color: #333841;
 }
@@ -19,6 +23,7 @@ label {
   border-radius: 8px;
   padding: 1rem;
   min-width: 300px;
+  background-color: #e6e3e3;
 }
 
 .col h3 {
@@ -31,23 +36,35 @@ label {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
 }
 
 .card {
   position: relative;
   background: #ffffff;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.7rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-left: 4px solid;
   text-align: left;
   color: black;
 }
 
+.card:hover {
+  transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
 .card div {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
 }
+
+.card .due {
+  margin-bottom: 0.7rem;
+  margin-top: -0.5rem;
+}
+
 .card .delete-btn {
   position: absolute;
   top: 8px;
@@ -57,25 +74,26 @@ label {
   font-size: 0.8rem;
   background-color: #ff3b30;
   color: white;
-  border-radius: 4px;
+  border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 2; /* Prioriza o botão sobre outros elementos */
+  z-index: 2;
 }
 
 .card .delete-btn.second-btn {
   position: absolute;
   top: 8px;
   font-size: 0.7rem;
-  right: 40px; /* Altera a posição do segundo botão */
-  background-color: #0e4380fa; /* Cor diferente */
-  z-index: 1; /* Menor prioridade, se necessário */
+  right: 40px;
+  background-color: #0e4380fa;
+  z-index: 1;
 }
 
 
 .card .delete-btn:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
+
 .card .delete-btn:focus,
 .card .delete-btn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -84,6 +102,65 @@ label {
 .btn-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px; 
+  align-items: center;
+}
+
+
+
+
+
+.card .start-btn {
+  top: 8px;
+  right: 8px;
+  border: 1px solid #4D90FE;
+  padding: 5px 8px;
+  font-size: 0.7rem;
+  background-color: white;
+  color: #4D90FE;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-weight: bold;
+}
+
+.card .start-btn:hover {
+
+  border: 1px solid #4D90FE;
+
+  background-color: #4D90FE;
+  color: white;
+  transform: scale(1.02); 
+
+  transition: opacity 0.2s;
+
+}
+
+
+.card .done-btn {
+  top: 8px;
+  right: 8px;
+  border: 1px solid #66BB6A;
+  padding: 5px 8px;
+  font-size: 0.7rem;
+  background-color: white;
+  color: #66BB6A;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-weight: bold;
+}
+
+.card .done-btn:hover {
+
+  border: 1px solid #66BB6A;
+
+  background-color: #66BB6A;
+  color: white;
+  transform: scale(1.02); 
+
+  transition: opacity 0.2s;
+
 }
 
 .card .info-btn {
@@ -91,42 +168,26 @@ label {
   right: 8px;
   border: 1px solid transparent;
   padding: 5px 8px;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   background-color: #63aca8;
   color: white;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   transition: opacity 0.2s;
   font-weight: bold;
 }
 
-.card .start-btn {
-  top: 8px;
-  right: 8px;
-  border: 1px solid transparent;
-  padding: 5px 8px;
-  font-size: 0.8rem;
-  background-color: #4D90FE;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-  font-weight: bold;
+
+.card .info-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.02); 
 }
 
-.card .done-btn {
-  top: 8px;
-  right: 8px;
-  border: 1px solid transparent;
-  padding: 5px 8px;
-  font-size: 0.8rem;
-  background-color: #66BB6A;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-  font-weight: bold;
+.card .info-btn:focus,
+.card .info-btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
+
 
 .edit-btn {
   top: 8px;
@@ -142,20 +203,12 @@ label {
   font-weight: bold;
 }
 
-.card .info-btn:hover {
-  opacity: 0.8;
-}
-.card .info-btn:focus,
-.card .info-btn:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 .label {
   background-color: #ff3b30;
   padding: 3px 8px;
-  border-radius: 4px;
+  border-radius: 20px;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: bold;
   display: inline-block;
 }
@@ -201,8 +254,10 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #007bff; /* Cor azul para foco */
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); /* Leve brilho ao redor */
+  border-color: #007bff;
+  /* Cor azul para foco */
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+  /* Leve brilho ao redor */
 }
 
 form textarea {
@@ -256,3 +311,4 @@ select:focus {
   border-color: #007bff;
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
 }
+

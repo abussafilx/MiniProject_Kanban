@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function ItemCards(props) {
-  const navigate = useNavigate(); // Para navegação
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const navigate = useNavigate();
+
   const statusColorsBorder = {
     "To Do": "#FF6B6B",
     "In Progress": "#4D90FE",
@@ -14,7 +17,7 @@ function ItemCards(props) {
     } else if (props.element.status === "In Progress") {
       return <button className="done-btn" onClick={handleFinish}>Complete</button>
     }
-  }
+  };
 
   const handleStart = (e) => {
     e.preventDefault();
@@ -40,6 +43,10 @@ function ItemCards(props) {
     props.updateTask(updatedTask);
 
     navigate("/");
+  };
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed); 
   };
 
   return (
@@ -68,33 +75,40 @@ function ItemCards(props) {
         </div>
       </div>
       <div>
-        <b>Title:</b> {props.element.title}
-      </div>
-      <div>
-        <b>Description:</b> {props.element.description}
-      </div>
-      <div>
-        <b>Assignee:</b> {props.element.assignee}
-      </div>
-      <div>
-        <b>Status:</b> {props.element.status}
-      </div>
-      <div>
-        <b>Priority:</b> {props.element.priority}
-      </div>
-      <div>
-        <b>Created Date:</b> {props.element.createdDate}
-      </div>
-      <div>
-        <b>Due Date:</b> {props.element.dueDate}
-      </div>
+            <h4>{props.element.title}</h4> 
+          </div>
+          <div className="due">
+            Due Date: {props.element.dueDate}
+          </div>
+
+      {/* Conteúdo que pode ser colapsado */}
+      {!isCollapsed && (
+        <>
+
+          <div>
+            <b>Description:</b> {props.element.description}
+          </div>
+          <div>
+            <b>Assignee:</b> {props.element.assignee}
+          </div>
+          <div>
+            <b>Status:</b> {props.element.status}
+          </div>
+          <div>
+            <b>Priority:</b> {props.element.priority}
+          </div>
+          <div>
+            <b>Created Date:</b> {props.element.createdDate}
+          </div>
+
+        </>
+      )}
 
       <div className="btn-container">
         <div>{advanceButton()}</div>
-        <Link to={`/item/${props.element.id}`}>
-          <button className="info-btn">More Info</button>
-        </Link>
-      </div>
+        <div><button className="info-btn" onClick={toggleCollapse}>
+        {isCollapsed ? "Show Details" : "Hide Details"}</button></div>      
+          </div>
     </div>
   );
 }
