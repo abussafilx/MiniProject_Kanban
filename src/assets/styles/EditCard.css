@@ -3,21 +3,26 @@
   color: #172b4d;
   font-size: 1.2rem;
 }
+
 #editTask input,
-#editTask textarea {
+#editTask textarea,
+#editTask select {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   color: #172b4d;
 }
+
 #editTask form {
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-top: 4px solid #172b4d;
 }
+
 #editTask button {
   background-color: #172b4d;
   border-color: #172b4d;
 }
+
 .edit-back-btn {
   width: 100%;
   color: white;
@@ -26,4 +31,43 @@
   padding: 0.5rem 0;
   background-color: #172b4d;
   border-color: #172b4d;
+}
+
+.App.dark #editTask .section-title {
+  color: #f0f0f0;
+}
+
+.App.dark #editTask input,
+.App.dark #editTask textarea,
+.App.dark #editTask select {
+  color: #f0f0f0;
+  background-color: #444;
+  border-color: #666;
+}
+
+.App.dark #editTask form {
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-top: 4px solid #f0f0f0;
+}
+
+.App.dark #editTask button {
+  background-color: #444;
+  border-color: #444;
+  color: #f0f0f0;
+}
+
+.App.dark #editTask button:hover {
+  background-color: #555;
+  border-color: #555;
+}
+
+.App.dark .edit-back-btn {
+  background-color: #444;
+  border-color: #444;
+}
+
+.App.dark .edit-back-btn:hover {
+  background-color: #555;
+  border-color: #555;
 }

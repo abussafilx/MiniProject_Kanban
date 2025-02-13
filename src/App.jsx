@@ -18,9 +18,19 @@ import { Bounce } from "react-toastify";
 function App() {
   const [tasks, setTasks] = useState(data);
   const [searchQuery, setSearchQuery] = useState("");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
   const isHomePage = location.pathname === "/";
 
   const navigate = useNavigate();
+
+  // Dark Light mode toggle
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    console.log(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
   //function to delete tasks
   const deleteTask = (id) => {
@@ -66,57 +76,59 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <div className={`App ${theme}`}>
+        <Navbar toggleTheme={toggleTheme} />
 
-      <Sidebar></Sidebar>
+        <Sidebar></Sidebar>
 
-      <div id="board">
-        {isHomePage && <SearchBar onSearch={setSearchQuery} />}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Board
-                tasks={filteredTasks}
-                setTasks={setTasks}
-                deleteTask={deleteTask}
-                updateTask={updateTask}
-              ></Board>
-            }
-          />
-          <Route path="/about" element={<About></About>} />
-          <Route path="/newtask" element={<AddCard addTask={addTask} />} />
-          <Route
-            path="/item/:id"
-            element={
-              <SingleTask tasks={tasks} deleteTask={deleteTask}></SingleTask>
-            }
-          />
-          <Route
-            path="/edit/:id"
-            element={
-              <EditCard tasks={tasks} updateTask={updateTask}></EditCard>
-            }
-          />
-          <Route path="*" element={<Error404></Error404>} />
-        </Routes>
+        <div id="board">
+          {isHomePage && <SearchBar onSearch={setSearchQuery} />}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Board
+                  tasks={filteredTasks}
+                  setTasks={setTasks}
+                  deleteTask={deleteTask}
+                  updateTask={updateTask}
+                ></Board>
+              }
+            />
+            <Route path="/about" element={<About></About>} />
+            <Route path="/newtask" element={<AddCard addTask={addTask} />} />
+            <Route
+              path="/item/:id"
+              element={
+                <SingleTask tasks={tasks} deleteTask={deleteTask}></SingleTask>
+              }
+            />
+            <Route
+              path="/edit/:id"
+              element={
+                <EditCard tasks={tasks} updateTask={updateTask}></EditCard>
+              }
+            />
+            <Route path="*" element={<Error404></Error404>} />
+          </Routes>
+        </div>
+
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          transition={Bounce}
+        />
+
+        <Footer />
       </div>
-
-      <ToastContainer
-        position="bottom-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-        transition={Bounce}
-      />
-
-      <Footer />
     </>
   );
 }

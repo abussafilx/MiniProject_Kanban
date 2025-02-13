@@ -1,3 +1,50 @@
+/* Dark Theme */
+.App.dark {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.App.dark .navbar,
+.App.dark #footer {
+  background-color: #2a2b2e;
+  color: #ffffff;
+}
+
+.App.dark .sidebar {
+  background-color: #444;
+}
+
+.App.dark .sidebar-link:hover {
+  background-color: #666;
+  color: #ffffff;
+}
+
+.App.dark .sidebar-toggle:hover {
+  background-color: #666;
+  color: #ffffff;
+}
+
+.App.dark .search-input {
+  background-color: #333;
+  color: #ffffff;
+}
+.App.dark .kanban-board {
+  background-color: #333333;
+  color: #d3cfcf;
+}
+
+.App.dark .kanban-board .col {
+  background-color: #4e4e4e;
+}
+.App.dark .kanban-board .col h3 {
+  color: #d3cfcf;
+}
+
+.App.dark .kanban-board .card {
+  background-color: #555555;
+  color: #d3cfcf;
+}
+
 /* Sidebar Styles */
 .sidebar {
   width: 15%;
@@ -61,8 +108,7 @@
   margin: 5px;
 }
 
-/**/
-
+/* Board Styles */
 #board {
   margin-left: 15%;
   padding: 15px;
@@ -74,6 +120,7 @@
   transition: 0.5s;
 }
 
+/* Navbar Styles */
 .navbar {
   background: #2a2b2e;
   padding: 0 1rem;
@@ -87,7 +134,6 @@
 }
 
 .navbar .logo {
-  
   height: 60px;
   margin-top: 8px;
 }
@@ -100,6 +146,57 @@
   color: #888;
 }
 
+/* Toggle Switch */
+.dark-mode {
+  color: white;
+  margin-right: 7px;
+}
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.theme-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.theme-switch input:checked + .slider {
+  background-color: #4d90fe;
+}
+
+.theme-switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Footer Styles */
 #footer {
   margin-left: 15%;
   text-align: center;

@@ -3,18 +3,51 @@
   color: #172b4d;
   font-size: 1.2rem;
 }
+
 #addTask input,
-#addTask textarea {
+#addTask textarea,
+#addTask select {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   color: #172b4d;
 }
+
 #addTask form {
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-top: 4px solid #172b4d;
 }
+
 #addTask button {
   background-color: #172b4d;
   border-color: #172b4d;
+}
+
+.App.dark #addTask .section-title {
+  color: #f0f0f0;
+}
+
+.App.dark #addTask input,
+.App.dark #addTask textarea,
+.App.dark #addTask select {
+  color: #f0f0f0;
+  background-color: #444;
+  border-color: #666;
+}
+
+.App.dark #addTask form {
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-top: 4px solid #f0f0f0;
+}
+
+.App.dark #addTask button {
+  background-color: #444;
+  border-color: #444;
+  color: #f0f0f0;
+}
+
+.App.dark #addTask button:hover {
+  background-color: #555;
+  border-color: #555;
 }

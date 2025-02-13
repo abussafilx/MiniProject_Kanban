@@ -1,3 +1,4 @@
+/* About Container */
 .about-container {
   margin: 0 auto;
   padding: 20px;
@@ -50,4 +51,37 @@
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 5px;
+}
+
+/* Dark Theme Styles */
+.App.dark .about-container {
+  color: #f0f0f0;
+}
+
+.App.dark .about-container h1,
+.App.dark .about-container h2,
+.App.dark .about-container h3,
+.App.dark .about-container p {
+  color: #f0f0f0;
+}
+
+.App.dark .about-container .dev-card {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+.App.dark .about-container .dev-card:hover {
+  background-color: #555;
+}
+
+.App.dark .about-container a {
+  color: #87ceeb;
+}
+
+.App.dark .about-container .dev-name {
+  color: #f0f0f0;
+}
+
+.App.dark .about-container .dev-image {
+  border: 4px solid #fff;
 }
