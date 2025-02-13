@@ -13,6 +13,7 @@ import Error404 from "./pages/Error404";
 import AddCard from "./pages/AddCard";
 import EditCard from "./pages/EditCard";
 import { ToastContainer, toast } from "react-toastify";
+import { Bounce } from "react-toastify";
 
 function App() {
   const [tasks, setTasks] = useState(data);
@@ -100,7 +101,19 @@ function App() {
         </Routes>
       </div>
 
-      <ToastContainer />
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Bounce}
+      />
 
       <Footer />
     </>
