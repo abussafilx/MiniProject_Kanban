@@ -78,6 +78,7 @@ function App() {
             element={
               <Board
                 tasks={filteredTasks}
+                setTasks={setTasks}
                 deleteTask={deleteTask}
                 updateTask={updateTask}
               ></Board>

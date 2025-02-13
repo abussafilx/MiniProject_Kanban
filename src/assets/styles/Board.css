@@ -329,3 +329,10 @@ font-weight: bold;
 font-size: .85rem;
 }
 
+.drop-area {
+  border: 1px dashed rgb(88, 88, 88);
+  color: rgb(88, 88, 88);
+  padding: 10px;
+  font-size: 16px;
+}
+

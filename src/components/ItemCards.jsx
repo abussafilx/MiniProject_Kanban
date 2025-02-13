@@ -11,53 +11,40 @@ function ItemCards(props) {
     Done: "#66BB6A",
   };
 
-  const advanceButton = function () {
-    if (props.element.status === "To Do") {
-      return <button className="start-btn" onClick={handleStart}>Start</button>
-    } else if (props.element.status === "In Progress") {
-      return <button className="done-btn" onClick={handleFinish}>Complete</button>
-    }
-  };
-
-  const handleStart = (e) => {
-    e.preventDefault();
-
-    const updatedTask = {
-      ...props.element,
-      status: "In Progress"
-    };
-
-    props.updateTask(updatedTask);
-
-    navigate("/");
-  };
-
-  const handleFinish = (e) => {
-    e.preventDefault();
-
-    const updatedTask = {
-      ...props.element,
-      status: "Done"
-    };
-
-    props.updateTask(updatedTask);
-
-    navigate("/");
-  };
-
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  return (
+
+const  handleDragStart = ( e) => {
+   props.setCurrentId(e.target.id)
+  }
+  const handleDrop = (e) => {
+    e.preventDefault()
+   
+  }
+  const handleDragOver = (e) => {
+    e.preventDefault()
+ 
+  } 
+  const handleDragLeave = (e) => {
+    e.preventDefault()
+   
+  }
+
+
+ return (
     <div
       className="card"
       key={props.element.id}
+      id={props.element.id}
       draggable="true"
+      onDragStart={handleDragStart}
+      onDrop={handleDrop} onDragLeave={handleDragLeave} onDragOver={handleDragOver} 
       style={{ borderColor: `${statusColorsBorder[props.element?.status]}` }}
     >
       <div className="btn-container">
-        <div>
+        <div> 
           {props.element.priority === "High" && (
             <span className="label">IMPORTANT</span>
           )}
@@ -81,7 +68,6 @@ function ItemCards(props) {
         Due Date: {props.element.dueDate}
       </div>
 
-      {/* Conteúdo que pode ser colapsado */}
       {!isCollapsed && (
         <>
 
@@ -105,7 +91,7 @@ function ItemCards(props) {
       )}
 
       <div className="btn-container-bottom">
-        <div>{advanceButton()}</div>
+       
         <div><button className="info-btn" onClick={toggleCollapse}>
           {isCollapsed ? "Show Details" : "Hide Details"}</button></div>
       </div>
