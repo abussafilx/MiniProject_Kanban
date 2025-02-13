@@ -3,7 +3,6 @@ import "../assets/styles/SingleTask.css";
 
 function SingleTask(props) {
   const taskId = useParams();
-  
 
   const taskObj = props.tasks.find((Obj) => {
     if (Obj.id === taskId.id) {

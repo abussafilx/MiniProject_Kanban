@@ -28,7 +28,6 @@ function App() {
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    console.log(newTheme);
     localStorage.setItem("theme", newTheme);
   };
 
@@ -54,6 +53,7 @@ function App() {
     setTasks(newList);
   };
 
+  // updating the task
   const updateTask = (updatedTask) => {
     toast("Task Updated");
     setTasks(
@@ -67,6 +67,7 @@ function App() {
     );
   };
 
+  // Search filter tasks
   const filteredTasks = tasks.filter((task) =>
     Object.values(task)
       .join(" ")
