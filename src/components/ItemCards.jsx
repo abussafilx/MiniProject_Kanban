@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 function ItemCards(props) {
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const navigate = useNavigate();
+  
 
   const statusColorsBorder = {
     "To Do": "#FF6B6B",

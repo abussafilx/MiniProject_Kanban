@@ -336,3 +336,67 @@ font-size: .85rem;
   font-size: 16px;
 }
 
+/* Responsividade */
+@media (max-width: 1024px) {
+  .kanban-board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    min-width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    padding: 0.5rem;
+  }
+
+  .col {
+    min-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .card {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .card .delete-btn {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+  }
+
+  .btn-container, .btn-container-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .col h3 {
+    font-size: 1rem;
+  }
+
+  .card {
+    font-size: 0.8rem;
+  }
+
+  form button {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+
